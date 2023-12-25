@@ -1,0 +1,103 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(140, 207, 246);
+  overflow: hidden;
+}
+body image {
+  max-width: 100%;
+  width: 100%;
+}
+body .container {
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+  background-color: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 30px;
+}
+body .container .heading {
+  font-size: 50px;
+}
+body .container nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+body .container nav li {
+  list-style: none;
+  font-size: 20px;
+}
+body .container .info {
+  font-size: 25px;
+}
+body .container form {
+  width: 100%;
+}
+body .container form input {
+  width: 70%;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 2px solid orange;
+}
+body .container form input:focus {
+  outline: 3px solid orange;
+}
+body .container form button {
+  width: 20%;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(140, 207, 246);
+  border: 2px solid orange;
+  color: white;
+  font-size: 18px;
+}
+body .container form button:hover {
+  transform: scale(1.1);
+}
+body .container form button:active {
+  background-color: orange;
+}
+body .not-found-pic-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-height: 1vh;
+  overflow: hidden;
+  text-align: center;
+}
+body .not-found-pic-div a {
+  width: 10%;
+  font-size: 20px;
+  box-shadow: 7px 6px 10px rgba(50, 50, 50, 0.4235294118);
+  text-decoration: none;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  color: #323232;
+}
+body .not-found-pic-div a:active {
+  box-shadow: none;
+  background-color: gold;
+  color: rgb(140, 207, 246);
+}
+body .not-found-pic-div a:hover {
+  transform: scale(1.1);
+}
+body .not-found-pic-div h2 {
+  margin: 0;
+}
+body .not-found-pic-div img {
+  width: 100%;
+  max-height: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=style.css.map */
