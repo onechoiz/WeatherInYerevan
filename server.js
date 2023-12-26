@@ -1,22 +1,11 @@
-const express = require("express");
-
-// const cities = require('cities')
-// const loc = require('city-lat-long-map')
-
+const express = require('express');
+const fs = require('fs')
 const port = 3002;
-
-// console.log(loc['New York, NY']);
-
-// getting city's lat, long from cities npm to feed te api
+const  citiesData = []
 
 const lng = "";
 const lat = "";
-// only for USA
-// const getLngLot = (city, state) =>{
-//     //  console.log(cities.findByCityAndState(cityname))
-// // console.log(cities.filter((e)=> e.city === cityname));
-// (cities.findByCityAndState(city, state))
-// }
+
 
 // geet weather from API
 const key = ``;
@@ -24,9 +13,28 @@ const URL = `https://api.open-meteo.com/v1/forecast?latitude=40.1811&longitude=4
 
 
 
+fs.readFile('cities.json', 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading the JSON file:', err);
+    process.exit(1); // Terminate the server on error
+  }
+
+  try {
+    // Parse the JSON data
+    citiesData = JSON.parse(data);
+  } catch (error) {
+    console.error('Error parsing JSON:', error);
+    process.exit(1); // Terminate the server on error
+  }
+});
+
+
 // handle express
 const app = express();
-
+app.use((req,res,next)=>{
+  req.citiesData = citiesData
+  next()
+})
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
@@ -71,15 +79,36 @@ app.post("/submit-form", (req, res) => {
    res.status(500).json({msg: "some went wrong: we only check for  weather in Yerevan"})
 }
   
-    // console.log('weather data :',weatherData);
-    // res.send(weatherData);
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 // handle page not found
 app.use((req, res) => {
   res.status(404).redirect("404.html");
 });
+
+
+
+
+
+
+
+
+
+
+
 
 app.listen(port, () => {
   console.log("on: ", port);
