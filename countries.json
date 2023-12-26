@@ -1,0 +1,274 @@
+{
+  "cities": [
+    {
+      "name": "Yerevan",
+      "country": "Armenia",
+      "latitude": 40.1872,
+      "longitude": 44.5152
+    },
+    {
+      "name": "Tokyo",
+      "country": "Japan",
+      "latitude": 35.6895,
+      "longitude": 139.6917
+    },
+    {
+      "name": "New York",
+      "country": "United States",
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    },
+    {
+      "name": "London",
+      "country": "United Kingdom",
+      "latitude": 51.5074,
+      "longitude": -0.1278
+    },
+    {
+      "name": "Paris",
+      "country": "France",
+      "latitude": 48.8566,
+      "longitude": 2.3522
+    },
+    {
+      "name": "Berlin",
+      "country": "Germany",
+      "latitude": 52.5200,
+      "longitude": 13.4050
+    },
+    {
+      "name": "Beijing",
+      "country": "China",
+      "latitude": 39.9042,
+      "longitude": 116.4074
+    },
+    {
+      "name": "Moscow",
+      "country": "Russia",
+      "latitude": 55.7558,
+      "longitude": 37.6176
+    },
+    {
+      "name": "Cairo",
+      "country": "Egypt",
+      "latitude": 30.0444,
+      "longitude": 31.2357
+    },
+    {
+      "name": "Rome",
+      "country": "Italy",
+      "latitude": 41.9028,
+      "longitude": 12.4964
+    },
+   
+    {
+      "name": "Rio de Janeiro",
+      "country": "Brazil",
+      "latitude": -22.9068,
+      "longitude": -43.1729
+    },
+    {
+      "name": "Toronto",
+      "country": "Canada",
+      "latitude": 43.6511,
+      "longitude": -79.3470
+    },
+    {
+      "name": "Seoul",
+      "country": "South Korea",
+      "latitude": 37.5665,
+      "longitude": 126.9780
+    },
+    {
+      "name": "Cape Town",
+      "country": "South Africa",
+      "latitude": -33.9249,
+      "longitude": 18.4241
+    },
+    {
+      "name": "Mumbai",
+      "country": "India",
+      "latitude": 19.0760,
+      "longitude": 72.8777
+    },
+    {
+      "name": "Shanghai",
+      "country": "China",
+      "latitude": 31.2304,
+      "longitude": 121.4737
+    },
+    {
+      "name": "Istanbul",
+      "country": "Turkey",
+      "latitude": 41.0082,
+      "longitude": 28.9784
+    },
+    {
+      "name": "Lagos",
+      "country": "Nigeria",
+      "latitude": 6.5244,
+      "longitude": 3.3792
+    },
+    {
+      "name": "Chicago",
+      "country": "United States",
+      "latitude": 41.8781,
+      "longitude": -87.6298
+    },
+    {
+      "name": "Lima",
+      "country": "Peru",
+      "latitude": -12.0464,
+      "longitude": -77.0428
+    },
+       {
+      "name": "Dubai",
+      "country": "United Arab Emirates",
+      "latitude": 25.2769,
+      "longitude": 55.2962
+    },
+    {
+      "name": "Buenos Aires",
+      "country": "Argentina",
+      "latitude": -34.6118,
+      "longitude": -58.4173
+    }, {
+      "name": "Stockholm",
+      "country": "Sweden",
+      "latitude": 59.3293,
+      "longitude": 18.0686
+    },
+        {
+      "name": "Cairo",
+      "country": "Egypt",
+      "latitude": 30.0444,
+      "longitude": 31.2357
+    },
+    {
+      "name": "Vancouver",
+      "country": "Canada",
+      "latitude": 49.2827,
+      "longitude": -123.1207
+    },
+    {
+      "name": "Singapore",
+      "country": "Singapore",
+      "latitude": 1.3521,
+      "longitude": 103.8198
+    },  {
+      "name": "Oslo",
+      "country": "Norway",
+      "latitude": 59.9139,
+      "longitude": 10.7522
+    },
+    {
+      "name": "Casablanca",
+      "country": "Morocco",
+      "latitude": 33.5731,
+      "longitude": -7.5898
+    },
+    {
+      "name": "San Francisco",
+      "country": "United States",
+      "latitude": 37.7749,
+      "longitude": -122.4194
+    },
+    {
+      "name": "Ljubljana",
+      "country": "Slovenia",
+      "latitude": 46.0569,
+      "longitude": 14.5058
+    },
+    {
+      "name": "Budapest",
+      "country": "Hungary",
+      "latitude": 47.4979,
+      "longitude": 19.0402
+    },
+    {
+      "name": "Doha",
+      "country": "Qatar",
+      "latitude": 25.276987,
+      "longitude": 51.520008
+    },
+    {
+      "name": "Warsaw",
+      "country": "Poland",
+      "latitude": 52.2297,
+      "longitude": 21.0122
+    },
+       {
+      "name": "Bogota",
+      "country": "Colombia",
+      "latitude": 4.7110,
+      "longitude": -74.0721
+    },
+    {
+      "name": "Vienna",
+      "country": "Austria",
+      "latitude": 48.8566,
+      "longitude": 16.3666
+    },
+    {
+      "name": "Kuala Lumpur",
+      "country": "Malaysia",
+      "latitude": 3.1390,
+      "longitude": 101.6869
+    },
+    {
+      "name": "Helsinki",
+      "country": "Finland",
+      "latitude": 60.1695,
+      "longitude": 24.9354
+    },
+     {
+      "name": "Auckland",
+      "country": "New Zealand",
+      "latitude": -36.8485,
+      "longitude": 174.7633
+    },
+    {
+      "name": "Dublin",
+      "country": "Ireland",
+      "latitude": 53.3498,
+      "longitude": -6.2603
+    },
+    {
+      "name": "Munich",
+      "country": "Germany",
+      "latitude": 48.8566,
+      "longitude": 11.0352
+    },
+    {
+      "name": "Manila",
+      "country": "Philippines",
+      "latitude": 13.41,
+      "longitude": 122.56
+    },
+    {
+      "name": "Prague",
+      "country": "Czech Republic",
+      "latitude": 50.0755,
+      "longitude": 14.4378
+    },
+        {
+      "name": "Bangkok",
+      "country": "Thailand",
+      "latitude": 13.7563,
+      "longitude": 100.5018
+    },
+    {
+      "name": "Copenhagen",
+      "country": "Denmark",
+      "latitude": 55.6761,
+      "longitude": 12.5683
+    },
+    {
+      "name": "Lisbon",
+      "country": "Portugal",
+      "latitude": 38.7223,
+      "longitude": -9.1393
+    }
+
+  ]
+}

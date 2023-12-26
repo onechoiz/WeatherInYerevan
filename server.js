@@ -68,7 +68,7 @@ app.post("/submit-form", (req, res) => {
   
 }else{
   console.log("something went  wrong ");
-   res.status(500).json({msg: "some went wrong"})
+   res.status(500).json({msg: "some went wrong: we only check for  weather in Yerevan"})
 }
   
     // console.log('weather data :',weatherData);
