@@ -27,45 +27,11 @@ if (form) {
   form.addEventListener("submit", async (e) => {
     // prevent the page from default reloading upon submission
     e.preventDefault();
-    // let usrInpt = document.querySelector("#usr-inpt").value;
-    //    post request to the seerver to send the user input
-    // try {
-    //   let res = await fetch("/submit-form", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/x-www-form-urlencoded",
-    //     },
-    //     body: new URLSearchParams({ usrInpt }),
-    //   });
-
-    //   if (res) {
-    //     let data = await res.json();
-    //     console.log(data.current);
-    //   }else {
-    //         // Handle the error based on the response status
-    //         console.log('Server returned an error:', res.status);
-    //     }
-    // } catch (error) {
-    //   console.log(error);
-    // }
-    // }
-    //          const response = fetch('/submit-form',{
-    //             method:'POST',
-    //             headers:{
-    //                 'Content-Type': 'application/x-www-form-urlencoded'
-    //             },
-    //             body: new URLSearchParams({usrInpt})
-    //          }).then(res =>res.json()).then(data => console.log(data.current)).
-    //          catch(err =>{
-    //             console.log('front- error',err);
-    //          })
-
+    
      try {
      let cityVal = document.getElementById('usr-input').value;
   console.log(cityVal); 
-//  const formData = new FormData(form)
 
-//    console.log(Array.from(formData));
  const resp = await fetch("/submit-form",{
     method: 'POST',
     headers:{
@@ -78,6 +44,9 @@ if (form) {
    
   const rep = await resp.json()
     console.log(rep);
+
+  sessionStorage.setItem('weatherData', JSON.stringify(rep));
+  window.location.href= "weatherDisplay.html"
   } catch (error) {
     console.log(error);
   }
