@@ -27,27 +27,27 @@ if (form) {
   form.addEventListener("submit", async (e) => {
     // prevent the page from default reloading upon submission
     e.preventDefault();
-    let usrInpt = document.querySelector(".usr-inpt").value;
+    // let usrInpt = document.querySelector("#usr-inpt").value;
     //    post request to the seerver to send the user input
-    try {
-      let res = await fetch("/submit-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({ usrInpt }),
-      });
+    // try {
+    //   let res = await fetch("/submit-form", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/x-www-form-urlencoded",
+    //     },
+    //     body: new URLSearchParams({ usrInpt }),
+    //   });
 
-      if (res) {
-        let data = await res.json();
-        console.log(data.current);
-      }else {
-            // Handle the error based on the response status
-            console.log('Server returned an error:', res.status);
-        }
-    } catch (error) {
-      console.log(error);
-    }
+    //   if (res) {
+    //     let data = await res.json();
+    //     console.log(data.current);
+    //   }else {
+    //         // Handle the error based on the response status
+    //         console.log('Server returned an error:', res.status);
+    //     }
+    // } catch (error) {
+    //   console.log(error);
+    // }
     // }
     //          const response = fetch('/submit-form',{
     //             method:'POST',
@@ -60,12 +60,35 @@ if (form) {
     //             console.log('front- error',err);
     //          })
 
+     try {
+     let cityVal = document.getElementById('usr-input').value;
+  console.log(cityVal); 
+//  const formData = new FormData(form)
+
+//    console.log(Array.from(formData));
+ const resp = await fetch("/submit-form",{
+    method: 'POST',
+    headers:{
+        'Content-Type':'application/json' 
+    },
+    body: JSON.stringify({
+        city: cityVal
+    })
+  })
+   
+  const rep = await resp.json()
+    console.log(rep);
+  } catch (error) {
+    console.log(error);
+  }
+ 
+
     console.log("Form submitted!");
-    console.log(usrInpt);
-    if (cityTxt && usrInpt) {
-      let cityName =
-        usrInpt.trim().slice(0, 1).toUpperCase() + usrInpt.trim().slice(1);
-      cityTxt.textContent = `city: ${cityName}`;
-    }
+    // console.log(usrInpt);
+    // if (cityTxt && usrInpt) {
+    //   let cityName =
+    //     usrInpt.trim().slice(0, 1).toUpperCase() + usrInpt.trim().slice(1);
+    //   cityTxt.textContent = `city: ${cityName}`;
+    // }
   });
 }
