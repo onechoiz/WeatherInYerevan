@@ -1,10 +1,19 @@
-// styles.scss
+
+$body-bg-color: #8ccbf6;
+$container-bg-color: #ffd700;
+$button-bg-color: #8ccbf6;
+$button-hover-bg-color: #ffa500;
+$button-active-bg-color: #ffa500;
+$link-border-color: #ffd700;
+$link-hover-bg-color: #ffd700;
+$link-hover-text-color: #8ccbf6;
+$shadow-color: rgba(0, 0, 0, 0.1);
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #8ccbf6;
+  background-color: $body-bg-color;
   overflow: hidden;
 
   nav {
@@ -17,16 +26,17 @@ body {
       font-size: 1.2rem;
     }
   }
+
   .container {
     margin: auto;
     padding: 20px;
     width: 40%;
-    background-color: #ffd700;
+    background-color: $container-bg-color;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px $shadow-color;
 
     .heading {
       font-size: 2.5rem;
@@ -38,6 +48,14 @@ body {
       font-size: 1.5rem;
       margin-bottom: 20px;
     }
+
+  .list{
+      // display: flex;
+      li{
+        list-style: none;
+        
+      }
+    }  
 
     form {
       width: 100%;
@@ -60,7 +78,7 @@ body {
         width: 20%;
         border-radius: 10px;
         padding: 10px;
-        background-color: #8ccbf6;
+        background-color: $button-bg-color;
         border: 2px solid #ffa500;
         color: white;
         font-size: 1rem;
@@ -69,13 +87,15 @@ body {
 
         &:hover {
           transform: scale(1.1);
+          background-color: $button-hover-bg-color;
         }
 
         &:active {
-          background-color: #ffa500;
+          background-color: $button-active-bg-color;
         }
       }
     }
+    
   }
 
   .not-found-pic-div {
@@ -94,7 +114,7 @@ body {
       font-size: 1rem;
       box-shadow: 0 0 10px rgba(50, 50, 50, 0.4235294118);
       text-decoration: none;
-      border: 2px solid #ffd700;
+      border: 2px solid $link-border-color;
       border-radius: 10px;
       padding: 10px;
       margin-bottom: 10px;
@@ -104,12 +124,13 @@ body {
 
       &:active {
         box-shadow: none;
-        background-color: #ffd700;
-        color: #8ccbf6;
+        background-color: $link-border-color;
+        color: $link-hover-text-color;
       }
 
       &:hover {
         transform: scale(1.1);
+        background-color: $link-hover-bg-color;
       }
     }
 
@@ -129,18 +150,18 @@ body {
 @media (max-width: 767px) {
   /* Styles for small screens (e.g., mobile phones) */
 
-  body .container{
-  width: 80%;
-   form {
-    width: 100%;
-
-    input {
+  body .container {
+    width: 80%;
+    form {
       width: 100%;
-    }
 
-    button {
-      width: 100%;
+      input {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+      }
     }
   }
-}
 }

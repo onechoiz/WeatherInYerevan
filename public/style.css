@@ -34,6 +34,9 @@ body .container .info {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
+body .container .list li {
+  list-style: none;
+}
 body .container form {
   width: 100%;
 }
@@ -62,6 +65,7 @@ body .container form button {
 }
 body .container form button:hover {
   transform: scale(1.1);
+  background-color: #ffa500;
 }
 body .container form button:active {
   background-color: #ffa500;
@@ -97,6 +101,7 @@ body .not-found-pic-div a:active {
 }
 body .not-found-pic-div a:hover {
   transform: scale(1.1);
+  background-color: #ffd700;
 }
 body .not-found-pic-div h2 {
   margin: 0;

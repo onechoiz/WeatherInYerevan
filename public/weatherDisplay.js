@@ -11,7 +11,8 @@ let precipitationProbabilityElement = document.getElementById(
 let visibilityElement = document.getElementById("visibility");
 
 console.log("connected");
-const weatherStoredData = sessionStorage.getItem('weatherData')
+const weatherStoredData = localStorage.getItem('weatherData')
+console.log(weatherStoredData);
 // console.log(weatherStoredData,"local");
 
 if(weatherStoredData){
