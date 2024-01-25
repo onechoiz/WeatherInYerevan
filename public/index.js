@@ -28,8 +28,10 @@ if (form) {
 
       localStorage.setItem("weatherData", JSON.stringify(weatherdata));
       window.location.href = "weatherDisplay.html";
+      localStorage.clear()
     } catch (error) {
       console.log(error);
+      
     }
 
     console.log("Form submitted!");

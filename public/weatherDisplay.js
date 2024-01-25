@@ -12,6 +12,7 @@ let visibilityElement = document.getElementById("visibility");
 
 console.log("connected");
 const weatherStoredData = localStorage.getItem('weatherData')
+
 console.log(weatherStoredData);
 // console.log(weatherStoredData,"local");
 
