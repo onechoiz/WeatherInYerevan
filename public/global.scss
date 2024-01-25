@@ -1,0 +1,24 @@
+
+$body-bg-color: #8ccbf6;
+$container-bg-color: #ffd700;
+$button-bg-color: #8ccbf6;
+$button-hover-bg-color: #ffa500;
+$button-active-bg-color: #ffa500;
+$link-border-color: #ffd700;
+$link-hover-bg-color: #ffd700;
+$link-hover-text-color: #8ccbf6;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$acc : red;
+
+// borders
+$border-readius: 10px;
+
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $body-bg-color;
+
+
+
+}

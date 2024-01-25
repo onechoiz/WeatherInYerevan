@@ -12,7 +12,7 @@ fs.readFile('cities.json', 'utf8', (err, data) => {
     // Parse the JSON data
     cities = JSON.parse(data);
     citiesData = cities.cities
-    // console.log(citiesData);
+    console.log(citiesData);
   
 
     startServer();
@@ -62,14 +62,21 @@ function startServer() {
       // console.log(citiesData);
       const city = citiesData.find((e) => e.name.toLowerCase().trim() === cityName.toLowerCase());
       if (city) {
-        let lng = city.longitude;
-        let lat = city.latitude;
-        const URL = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,wind_speed_10m,relative_humidity_2m,apparent_temperature,precipitation_probability,visibility&timezone=auto`;
+        // let lng = city.longitude;
+        // let lat = city.latitude;
+      let   latitude = 38.7223
+      let longitude = -9.1393
+
+        // const URL = `https://api.open-meteo.com/v1/forecast?latitude=38.7223&longitude=-9.1393&current=temperature_2m,wind_speed_10m,relative_humidity_2m,apparent_temperature,precipitation_probability,visibility&timezone=auto`;
+        const URL = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m,relative_humidity_2m,apparent_temperature,precipitation_probability,visibility&timezone=auto`;
 
         const response = await fetch(URL);
+        if(!response){
+          console.log("error fetching ");
+        }
         const weatherData = await response.json();
         console.log(weatherData);
-        res.json(weatherData);
+        res.send(weatherData);
       } else {
         res.status(404).json({ error: 'City not found' });
       }

@@ -1,87 +1,38 @@
-// const { response } = require("express");
-
-let searchBtn = document.querySelector(".search");
-
-let form = document.querySelector("form");
-let navDiv = document.querySelectorAll(".nav-container");
-let cityTxt = document.querySelector("#location");
-let temperature = document.querySelector("#temperature");
-
-// inject navigatition bar into ultiple html files
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("nav.html")
-    .then((res) => res.text())
-    .then((data) => {
-      navDiv.forEach((el) => {
-        el.innerHTML = data;
-      });
-    })
-
-    .catch((Err) => {
-      console.log("erorr:", Err);
-    });
-});
+const form = document.getElementById("form");
 
 // cheeckif there is form and if there is handle the submission
+
 if (form) {
   form.addEventListener("submit", async (e) => {
     // prevent the page from default reloading upon submission
     e.preventDefault();
-    // let usrInpt = document.querySelector("#usr-inpt").value;
-    //    post request to the seerver to send the user input
-    // try {
-    //   let res = await fetch("/submit-form", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/x-www-form-urlencoded",
-    //     },
-    //     body: new URLSearchParams({ usrInpt }),
-    //   });
 
-    //   if (res) {
-    //     let data = await res.json();
-    //     console.log(data.current);
-    //   }else {
-    //         // Handle the error based on the response status
-    //         console.log('Server returned an error:', res.status);
-    //     }
-    // } catch (error) {
-    //   console.log(error);
-    // }
-    // }
-    //          const response = fetch('/submit-form',{
-    //             method:'POST',
-    //             headers:{
-    //                 'Content-Type': 'application/x-www-form-urlencoded'
-    //             },
-    //             body: new URLSearchParams({usrInpt})
-    //          }).then(res =>res.json()).then(data => console.log(data.current)).
-    //          catch(err =>{
-    //             console.log('front- error',err);
-    //          })
+    try {
+      let cityVal = document.getElementById("usr-input").value;
+      console.log(cityVal, "city val");
 
-     try {
-     let cityVal = document.getElementById('usr-input').value;
-  console.log(cityVal); 
-//  const formData = new FormData(form)
+      const resp = await fetch("/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          city: cityVal,
+        }), 
+      });
+     if(!resp.ok){
+      throw new error({error: "HTTP error!"})
+     }
+      const weatherdata = await resp.json();
+      console.log("resp",weatherdata.current);
 
-//    console.log(Array.from(formData));
- const resp = await fetch("/submit-form",{
-    method: 'POST',
-    headers:{
-        'Content-Type':'application/json' 
-    },
-    body: JSON.stringify({
-        city: cityVal
-    })
-  })
-   
-  const rep = await resp.json()
-    console.log(rep);
-  } catch (error) {
-    console.log(error);
-  }
- 
+      localStorage.setItem("weatherData", JSON.stringify(weatherdata));
+      window.location.href = "weatherDisplay.html";
+      localStorage.clear()
+    } catch (error) {
+      console.log(error);
+      
+    }
 
     console.log("Form submitted!");
     // console.log(usrInpt);

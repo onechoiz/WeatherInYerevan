@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #8ccbf6;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+nav li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+  width: 30%;
+  background-color: #ffd700;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container .temperature {
+  font-size: 29px;
+}
+.container .list {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.container .list li {
+  list-style: none;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 1207px) {
+  .container {
+    width: 60%;
+  }
+}
+@media (max-width: 767px) {
+  /* Styles for small screens (e.g., mobile phones) */
+  .container {
+    width: 200px;
+  }
+  .container .list {
+    width: inherit;
+    flex-flow: column;
+  }
+  .container .list li {
+    width: 100%;
+  }
+}/*# sourceMappingURL=weatherDisplay.css.map */

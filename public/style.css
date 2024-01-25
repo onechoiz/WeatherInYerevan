@@ -2,80 +2,74 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(140, 207, 246);
+  background-color: #8ccbf6;
   overflow: hidden;
 }
-
-body image {
-  max-width: 100%;
+body nav {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
-
+body nav li {
+  list-style: none;
+  font-size: 1.2rem;
+}
 body .container {
   margin: auto;
   padding: 20px;
   width: 40%;
-  background-color: gold;
+  background-color: #ffd700;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 body .container .heading {
-  font-size: 50px;
+  font-size: 2.5rem;
+  color: #323232;
+  margin-bottom: 20px;
 }
-
-body .container nav {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-body .container nav li {
-  list-style: none;
-  font-size: 20px;
-}
-
 body .container .info {
-  font-size: 25px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
-
+body .container .list li {
+  list-style: none;
+}
 body .container form {
   width: 100%;
 }
-
 body .container form input {
   width: 70%;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
-  font-size: 18px;
-  border: 2px solid orange;
+  font-size: 1rem;
+  border: 2px solid #ffa500;
+  margin-bottom: 15px;
+  box-sizing: border-box;
 }
-
 body .container form input:focus {
-  outline: 3px solid orange;
+  outline: 3px solid #ffa500;
 }
-
 body .container form button {
   width: 20%;
   border-radius: 10px;
-  padding: 5px;
-  background-color: rgb(140, 207, 246);
-  border: 2px solid orange;
+  padding: 10px;
+  background-color: #8ccbf6;
+  border: 2px solid #ffa500;
   color: white;
-  font-size: 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
-
 body .container form button:hover {
   transform: scale(1.1);
+  background-color: #ffa500;
 }
-
 body .container form button:active {
-  background-color: orange;
+  background-color: #ffa500;
 }
-
 body .not-found-pic-div {
   width: 100%;
   display: flex;
@@ -85,37 +79,53 @@ body .not-found-pic-div {
   min-height: 1vh;
   overflow: hidden;
   text-align: center;
+  margin-top: 20px;
 }
-
 body .not-found-pic-div a {
-  width: 10%;
-  font-size: 20px;
-  box-shadow: 7px 6px 10px rgba(50, 50, 50, 0.4235294118);
+  width: 30%;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(50, 50, 50, 0.4235294118);
   text-decoration: none;
-  border: 2px solid gold;
+  border: 2px solid #ffd700;
   border-radius: 10px;
-  padding: 4px 10px;
+  padding: 10px;
   margin-bottom: 10px;
   color: #323232;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
-
 body .not-found-pic-div a:active {
   box-shadow: none;
-  background-color: gold;
-  color: rgb(140, 207, 246);
+  background-color: #ffd700;
+  color: #8ccbf6;
 }
-
 body .not-found-pic-div a:hover {
   transform: scale(1.1);
+  background-color: #ffd700;
 }
-
 body .not-found-pic-div h2 {
   margin: 0;
+  font-size: 1.5rem;
 }
-
 body .not-found-pic-div img {
   width: 100%;
   max-height: inherit;
   -o-object-fit: contain;
-  object-fit: contain;
-} /*# sourceMappingURL=style.css.map */
+     object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  /* Styles for small screens (e.g., mobile phones) */
+  body .container {
+    width: 80%;
+  }
+  body .container form {
+    width: 100%;
+  }
+  body .container form input {
+    width: 100%;
+  }
+  body .container form button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

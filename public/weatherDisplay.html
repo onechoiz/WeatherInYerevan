@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weatherDisplay.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+<body>
+      <!-- nav  -->
+<div id="nav-container" class="nav-container"></div>
+<div class="container">
+
+
+     <div id="location-container">
+      <p ><span> <i class="bi bi-geo"></i> </span> <span id="cityName"></span>, <span id="country"> </span></p>
+     </div>
+     <!-- weather info container-->
+     <div id="weather-info-container">
+        <h2 class="temperature" id="temperature"></h2>
+        <h3>Real feel: <span  id="real-feel"></span></h3>
+        <div id="icon"></div>
+        <ul class="list">
+          
+            <li>Humidity: <span id="humidity"></span></li>
+            <li>Wind Speed: <span id="windSpeed"></span> </li>
+            <li>Precipitation probability: <span id="precipitation_probability"></span> </li>
+            <li>Visibility: <span id="visibility"></span> </li>
+
+        </ul>
+     </div>
+ </div>
+
+    <script src="weatherDisplay.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

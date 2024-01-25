@@ -10,25 +10,28 @@
     <div class="container">
       <h1 class="heading">Weather</h1>
 
-     <!-- nav  -->
+      <!-- nav  -->
 
-     <div id="nav-container" class="nav-container"></div>
+      <div id="nav-container" class="nav-container"></div>
       <p class="info">Check the weather in your city <span>&#9925;</span></p>
-      <form onsubmit="{()=> e.preventDefault()}" 
-      action=""><input type="text" class= 'usr-input' id="usr-input" placeholder="what city ...." /> 
-      <button class='search' >search</button></form>
-       <div>
-        <p id="location"> </p>
-        <p id="temperature"> </p>
+      <form  action="" id="form">
+        <input
+          type="text"
+          class="usr-input"
+          id="usr-input"
+          placeholder="what city ...."
+        />
+        <button class="search">search</button>
+      </form>
+      <div>
+        <p id="location"></p>
+        <p id="temperature"></p>
+
+       
+      </div>
+    </div>
 
     <script src="index.js"></script>
-    </div>
-    </div>
-
-   
-    
-
-
-    <script src="index.js"></script>
+     <script src="nav.js"></script>
   </body>
 </html>
